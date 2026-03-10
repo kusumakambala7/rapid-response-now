@@ -8,6 +8,23 @@ import { fetchAccidents } from "@/lib/api";
 export default function LiveMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<any>(null);
+  const [accidents, setAccidents] = useState<AccidentReport[]>(mockAccidents);
+
+  useEffect(() => {
+    fetchAccidents()
+      .then((data) => {
+        if (data && data.length > 0) {
+          const parsed: AccidentReport[] = data.map((a: any) => ({
+            ...a,
+            reportedAt: new Date(a.reportedAt),
+          }));
+          setAccidents(parsed);
+        }
+      })
+      .catch(() => {
+        // API unavailable — use mock data
+      });
+  }, []);
 
   useEffect(() => {
     if (!mapRef.current || mapInstance.current) return;
