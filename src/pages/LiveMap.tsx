@@ -110,7 +110,7 @@ export default function LiveMap() {
       <div className="w-full border-t border-border bg-card p-4 lg:w-80 lg:overflow-y-auto lg:border-l lg:border-t-0">
         <h3 className="mb-4 text-lg font-bold text-foreground">Recent Accidents</h3>
         <div className="space-y-3">
-          {mockAccidents.map((a, i) => (
+          {accidents.map((a, i) => (
             <motion.div
               key={a.id}
               initial={{ opacity: 0, x: 20 }}
