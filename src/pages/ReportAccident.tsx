@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import GoldenHourTimer from "@/components/GoldenHourTimer";
 import SeverityBadge from "@/components/SeverityBadge";
 import { toast } from "sonner";
+import { reportAccident } from "@/lib/api";
 
 type Severity = "low" | "medium" | "critical";
 
