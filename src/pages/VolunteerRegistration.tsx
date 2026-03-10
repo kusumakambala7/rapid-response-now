@@ -4,6 +4,7 @@ import { Users, Heart, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { registerVolunteer } from "@/lib/api";
 
 export default function VolunteerRegistration() {
   const [submitted, setSubmitted] = useState(false);
