@@ -88,7 +88,7 @@ export default function LiveMap() {
         mapInstance.current = null;
       }
     };
-  }, []);
+  }, [accidents]);
 
   return (
     <div className="flex min-h-[calc(100vh-4rem)] flex-col lg:flex-row">
