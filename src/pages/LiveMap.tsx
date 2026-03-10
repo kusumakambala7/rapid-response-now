@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { mockAccidents } from "@/lib/mockData";
+import { mockAccidents, type AccidentReport } from "@/lib/mockData";
 import SeverityBadge from "@/components/SeverityBadge";
 import { MapPin } from "lucide-react";
+import { fetchAccidents } from "@/lib/api";
 
 export default function LiveMap() {
   const mapRef = useRef<HTMLDivElement>(null);
