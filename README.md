@@ -59,6 +59,29 @@ Provides step-by-step instructions to help bystanders assist injured victims saf
 
 Shows accident statistics and helps identify accident-prone areas for better road safety planning.
 
+## 📸 Project Screenshots
+
+### Home Page
+![Home](./Screenshot%202026-03-10%20150148.png)
+
+### Report Accident Page
+![Report Accident](./Screenshot%202026-03-10%20150237.png)
+
+### Live Map
+![Live Map](./Screenshot%202026-03-10%20150315.png)
+
+### First Aid Guide
+![First Aid](./Screenshot%202026-03-10%20150343.png)
+
+### Dashboard
+![Dashboard](./Screenshot%202026-03-10%20150416.png)
+
+### Heatmap
+![Heatmap](./Screenshot%202026-03-10%20150449.png)
+
+### Volunteer Registration
+![Volunteer Registration](./Screenshot%202026-03-10%20150521.png)
+
 🛠️ Technologies Used
 
 Frontend: React / Modern Web UI
