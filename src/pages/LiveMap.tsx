@@ -50,7 +50,7 @@ export default function LiveMap() {
         critical: "#dc2626",
       };
 
-      mockAccidents.forEach((a) => {
+      accidents.forEach((a) => {
         const color = severityColors[a.severity];
         const marker = L.circleMarker([a.lat, a.lng], {
           radius: a.severity === "critical" ? 12 : a.severity === "medium" ? 9 : 7,
