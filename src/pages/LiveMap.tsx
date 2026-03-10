@@ -70,7 +70,7 @@ export default function LiveMap() {
       });
 
       // Heatmap overlay using circles
-      mockAccidents.forEach((a) => {
+      accidents.forEach((a) => {
         L.circle([a.lat, a.lng], {
           radius: 800,
           color: "transparent",
