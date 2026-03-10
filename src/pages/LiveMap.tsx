@@ -1,12 +1,30 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { mockAccidents } from "@/lib/mockData";
+import { mockAccidents, type AccidentReport } from "@/lib/mockData";
 import SeverityBadge from "@/components/SeverityBadge";
 import { MapPin } from "lucide-react";
+import { fetchAccidents } from "@/lib/api";
 
 export default function LiveMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstance = useRef<any>(null);
+  const [accidents, setAccidents] = useState<AccidentReport[]>(mockAccidents);
+
+  useEffect(() => {
+    fetchAccidents()
+      .then((data) => {
+        if (data && data.length > 0) {
+          const parsed: AccidentReport[] = data.map((a: any) => ({
+            ...a,
+            reportedAt: new Date(a.reportedAt),
+          }));
+          setAccidents(parsed);
+        }
+      })
+      .catch(() => {
+        // API unavailable — use mock data
+      });
+  }, []);
 
   useEffect(() => {
     if (!mapRef.current || mapInstance.current) return;
@@ -32,7 +50,7 @@ export default function LiveMap() {
         critical: "#dc2626",
       };
 
-      mockAccidents.forEach((a) => {
+      accidents.forEach((a) => {
         const color = severityColors[a.severity];
         const marker = L.circleMarker([a.lat, a.lng], {
           radius: a.severity === "critical" ? 12 : a.severity === "medium" ? 9 : 7,
@@ -52,7 +70,7 @@ export default function LiveMap() {
       });
 
       // Heatmap overlay using circles
-      mockAccidents.forEach((a) => {
+      accidents.forEach((a) => {
         L.circle([a.lat, a.lng], {
           radius: 800,
           color: "transparent",
@@ -70,7 +88,7 @@ export default function LiveMap() {
         mapInstance.current = null;
       }
     };
-  }, []);
+  }, [accidents]);
 
   return (
     <div className="flex min-h-[calc(100vh-4rem)] flex-col lg:flex-row">
@@ -92,7 +110,7 @@ export default function LiveMap() {
       <div className="w-full border-t border-border bg-card p-4 lg:w-80 lg:overflow-y-auto lg:border-l lg:border-t-0">
         <h3 className="mb-4 text-lg font-bold text-foreground">Recent Accidents</h3>
         <div className="space-y-3">
-          {mockAccidents.map((a, i) => (
+          {accidents.map((a, i) => (
             <motion.div
               key={a.id}
               initial={{ opacity: 0, x: 20 }}

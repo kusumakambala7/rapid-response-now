@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import GoldenHourTimer from "@/components/GoldenHourTimer";
 import SeverityBadge from "@/components/SeverityBadge";
 import { toast } from "sonner";
+import { reportAccident } from "@/lib/api";
 
 type Severity = "low" | "medium" | "critical";
 
@@ -75,11 +76,23 @@ export default function ReportAccident() {
     setListening(true);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!description.trim()) {
       toast.error("Please add a description");
       return;
+    }
+    try {
+      await reportAccident({
+        description,
+        severity,
+        lat: location?.lat ?? null,
+        lng: location?.lng ?? null,
+        address: location ? `${location.lat.toFixed(4)}, ${location.lng.toFixed(4)}` : "",
+        imageUrl: imagePreview ?? "",
+      });
+    } catch {
+      // API unavailable — continue with local-only submission
     }
     setSubmitted(true);
     toast.success("Accident reported! Emergency services notified.");

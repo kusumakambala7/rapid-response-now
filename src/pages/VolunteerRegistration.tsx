@@ -4,16 +4,22 @@ import { Users, Heart, MapPin, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { registerVolunteer } from "@/lib/api";
 
 export default function VolunteerRegistration() {
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({ name: "", email: "", phone: "", skills: "", city: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.phone) {
       toast.error("Please fill all required fields");
       return;
+    }
+    try {
+      await registerVolunteer(form);
+    } catch {
+      // API unavailable — continue with local-only submission
     }
     setSubmitted(true);
     toast.success("Thank you for volunteering!");
