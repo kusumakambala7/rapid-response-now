@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+🚑 RescueLink – Smart Road Accident Reporting & Emergency Response System
+📌 Project Overview
 
-## Project info
+RescueLink is a smart web-based platform designed to help citizens quickly report road accidents and enable faster emergency response.
+The system connects citizens, volunteers, hospitals, and emergency services to reduce response time and save lives during the Golden Hour.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This platform provides real-time accident reporting, live accident maps, first aid guidance, and a volunteer rescue network to assist victims before medical teams arrive.
 
-## How can I edit this code?
+🎯 Problem Statement
 
-There are several ways of editing your application.
+Every year, thousands of people lose their lives in road accidents due to delayed emergency response.
+Many victims do not receive immediate medical attention within the Golden Hour, which significantly reduces survival chances.
 
-**Use Lovable**
+💡 Proposed Solution
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+RescueLink allows users to report accidents instantly, automatically capture location, and notify nearby volunteers and emergency services.
+By combining technology and community support, the system helps ensure faster response and better coordination during emergencies.
 
-Changes made via Lovable will be committed automatically to this repo.
+🚀 Key Features
+📍 Accident Reporting
 
-**Use your preferred IDE**
+Users can quickly report accidents by providing:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Location
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Description of accident
 
-Follow these steps:
+Severity level
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+🗺️ Live Accident Map
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Displays real-time accident locations on a map with severity indicators:
 
-# Step 3: Install the necessary dependencies.
-npm i
+🟢 Low Risk
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+🟠 Medium Risk
 
-**Edit a file directly in GitHub**
+🔴 Critical
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+⏱️ Golden Hour Awareness
 
-**Use GitHub Codespaces**
+Highlights the importance of immediate response within the first 60 minutes after an accident to increase survival chances.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🧑‍🤝‍🧑 Volunteer Rescue Network
 
-## What technologies are used for this project?
+Nearby volunteers receive alerts and can:
 
-This project is built with:
+Reach accident locations faster
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Provide basic first aid
 
-## How can I deploy this project?
+Assist emergency responders
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+🩺 First Aid Guide
 
-## Can I connect a custom domain to my Lovable project?
+Provides step-by-step instructions to help bystanders assist injured victims safely before medical help arrives.
 
-Yes, you can!
+📊 Dashboard & Analytics
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Shows accident statistics and helps identify accident-prone areas for better road safety planning.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+🛠️ Technologies Used
+
+Frontend: React / Modern Web UI
+
+Platform: Lovable AI App Builder
+
+Version Control: GitHub
+
+Mapping: Interactive Map Integration
+
+Design: Responsive and modern UI
+
+🌍 Impact
+
+RescueLink aims to:
+
+Reduce accident response time
+
+Improve survival rates during emergencies
+
+Encourage community participation in rescue efforts
+
+Provide valuable data for improving road safety
+
+🔮 Future Enhancements
+
+AI-based accident severity detection
+
+Automatic emergency service alerts
+
+Accident heatmap for high-risk areas
+
+Mobile app integration
+
+Integration with ambulance services and hospitals
+
+👨‍💻 Author
+
+Kusuma Saisri
+Artificial Intelligence and Data Science Student
+
+⭐ Acknowledgment
+
+This project was developed as a social impact initiative to improve road safety and emergency response using technology.
