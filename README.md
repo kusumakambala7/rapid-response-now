@@ -62,25 +62,25 @@ Shows accident statistics and helps identify accident-prone areas for better roa
 ## 📸 Project Screenshots
 
 ### Home Page
-![Home](./Screenshot%202026-03-10%20150148.png)
+![Home](ss/Screenshot%202026-03-10%20150148.png)
 
 ### Report Accident Page
-![Report Accident](./Screenshot%202026-03-10%20150237.png)
+![Report Accident](ss/Screenshot%202026-03-10%20150237.png)
 
 ### Live Map
-![Live Map](./Screenshot%202026-03-10%20150315.png)
+![Live Map](ss/Screenshot%202026-03-10%20150315.png)
 
 ### First Aid Guide
-![First Aid](./Screenshot%202026-03-10%20150343.png)
+![First Aid](ss/Screenshot%202026-03-10%20150343.png)
 
 ### Dashboard
-![Dashboard](./Screenshot%202026-03-10%20150416.png)
+![Dashboard](ss/Screenshot%202026-03-10%20150416.png)
 
 ### Heatmap
-![Heatmap](./Screenshot%202026-03-10%20150449.png)
+![Heatmap](ss/Screenshot%202026-03-10%20150449.png)
 
 ### Volunteer Registration
-![Volunteer Registration](./Screenshot%202026-03-10%20150521.png)
+![Volunteer Registration](ss/Screenshot%202026-03-10%20150521.png)
 
 🛠️ Technologies Used
 
