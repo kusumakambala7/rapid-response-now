@@ -121,7 +121,7 @@ Integration with ambulance services and hospitals
 👨‍💻 Author
 
 Kusuma Saisri
-Artificial Intelligence and Data Science Student
+
 
 ⭐ Acknowledgment
 
